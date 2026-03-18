@@ -15,7 +15,8 @@ export async function initLanguage() {
   
   // Update toggle button text if exists
   const toggleBtn = document.getElementById('lang-toggle');
-  if (toggleBtn) {
+  if (toggleBtn && !toggleBtn.dataset.langBound) {
+    toggleBtn.dataset.langBound = 'true';
     toggleBtn.textContent = currentLang === 'zh' ? 'EN' : '中';
     toggleBtn.addEventListener('click', () => {
       const newLang = currentLang === 'zh' ? 'en' : 'zh';
@@ -115,9 +116,15 @@ function renderPage() {
   if (expContainer && siteData.experience) {
     expContainer.innerHTML = siteData.experience.map(exp => `
       <div class="tl-item">
-        <span class="tl-date">${exp.date || ''}</span>
-        <h4>${exp.companyLink ? `<a href="${exp.companyLink}" target="_blank">${exp.title}</a>` : exp.title}</h4>
-        ${exp.desc ? `<p>${exp.desc}</p>` : ''}
+        <div class="tl-card">
+          <span class="tl-date">${exp.date || ''}</span>
+          ${exp.company
+            ? `<p class="tl-org">${exp.companyLink
+              ? `<a href="${exp.companyLink}" target="_blank" rel="noopener noreferrer">${exp.company}</a>`
+              : exp.company}</p>`
+            : ''}
+          ${exp.role || exp.title ? `<h4 class="tl-title tl-role">${(exp.role || exp.title || '').trim()}</h4>` : ''}
+        </div>
       </div>
     `).join('');
   }
@@ -127,8 +134,11 @@ function renderPage() {
   if (awardsContainer && siteData.awards) {
     awardsContainer.innerHTML = `<div class="vertical-timeline">` + siteData.awards.map(aw => `
       <div class="award-item">
-        <span class="tl-date">${aw.date || ''}</span>
-        <h4>${aw.title}</h4>
+        <div class="tl-card">
+          <span class="tl-date">${aw.date || ''}</span>
+          <h4 class="tl-title">${aw.title || ''}</h4>
+          ${aw.desc ? `<p class="tl-desc">${aw.desc}</p>` : ''}
+        </div>
       </div>
     `).join('') + `</div>`;
   } else if (awardsContainer) {
@@ -144,10 +154,13 @@ function renderPage() {
   const projContainer = document.getElementById('projects-grid');
   if (projContainer && siteData.projects) {
     projContainer.innerHTML = siteData.projects.map(p => `
-      <a class="proj-card" onclick="window.location.href='project.html?id=${p.id}'">
+      <a class="proj-card" href="project.html?id=${encodeURIComponent(p.id || '')}">
+        <div class="proj-cover">
+          <img src="${resolvePath(p.image || p.img || 'https://via.placeholder.com/800x500?text=Project+Preview')}" alt="${p.title}" loading="lazy">
+        </div>
         <div class="proj-info">
           <h4>${p.title}</h4>
-          <p>${p.shortDesc}</p>
+          <p>${p.shortDesc || p.desc || ''}</p>
         </div>
       </a>
     `).join('');
@@ -159,7 +172,7 @@ function renderPage() {
     galleryContainer.innerHTML = siteData.gallery.map(g => `
       <div class="gallery-item" onclick="openDetails('gallery', '${g.id}')">
         <div class="img-wrap">
-          <img src="${resolvePath(g.image)}" alt="${g.title}" loading="lazy">
+          <img src="${resolvePath(g.image || g.img || 'https://via.placeholder.com/600x400?text=Image+Unavailable')}" alt="${g.title}" loading="lazy">
         </div>
         <h5>${g.title}</h5>
       </div>
@@ -181,8 +194,8 @@ window.openDetails = function(type, id) {
     html = `
       <div class="detail-art">
         <h1>${item.title}</h1>
-        <p>${item.desc || ''}</p>
-        <img src="${resolvePath(item.image)}" alt="${item.title}">
+        ${item.detailsBody || item.desc || ''}
+        ${(item.image || item.img) ? `<img src="${resolvePath(item.image || item.img)}" alt="${item.title}">` : ''}
       </div>
     `;
   }

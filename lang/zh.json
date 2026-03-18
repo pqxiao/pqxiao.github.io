@@ -10,18 +10,18 @@
     "contact": "联系方式"
   },
   "profile": {
-    "name": "Daniel Shaw",
-    "role": "人工智能专业学生 / 机器人软件实习生",
-    "bio": "作为一名大三人工智能专业学生及半退役的全国大学生机器人大赛（RCer）选手，我目前在 GigaAI 担任机器人软件实习生。主要专注于机器人控制系统的开发。对底层嵌入式及上层控制算法充满热情。",
+    "name": "Pengqi Xiao",
+    "role": "嵌入式软件/机器人开发",
+    "bio": "人工智能大三在读，半退休RCer，目前在极佳视界担任机器人软件实习生。致力于机器人控制系统开发。",
     "interestsTitle": "主要技术栈",
     "interests": [
-      { "icon": "fas fa-code", "text": "C/C++ / Python / MATLAB" },
+      { "icon": "fas fa-code", "text": "C / C++ / Python" },
       { "icon": "fas fa-robot", "text": "ROS / ROS2 / Webots / MuJoCo" },
-      { "icon": "fas fa-microchip", "text": "STM32 / ESP32 / FreeRTOS" }
+      { "icon": "fas fa-microchip", "text": "STM32 / ESP32 / Linux" }
     ],
     "educationTitle": "教育经历",
     "education": [
-      { "icon": "fas fa-graduation-cap", "degree": "学士 / 人工智能", "school": "南昌大学", "year": "2023 - 至今" }
+      { "icon": "fas fa-graduation-cap", "degree": "本科/人工智能", "school": "南昌大学", "year": "2023.9 - 2027.6" }
     ]
   },
   "sections": {
@@ -35,36 +35,41 @@
   "experience": [
     {
       "role": "机器人软件实习生",
-      "company": "GigaAI",
+      "company": "极佳视界",
       "companyLink": "https://gigaai.cc/",
-      "date": "近期 – 至今",
-      "location": "杭州，浙江",
-      "desc": "专注于机器人控制系统开发，参与多项核心算法的研究和落地测试。"
+      "date": "2026.1 – 至今"
     }
   ],
   "awards": [
     {
       "title": "全国大学生机器人大赛 (Robocon)",
+      "date": "2025年",
+      "desc": "排球挑战赛全国二等奖"
+    },
+    {
+      "title": "全国大学生机器人大赛 (Robocon)",
+      "date": "2025年",
+      "desc": "飞身上篮全国三等奖"
+    },
+    {
+      "title": "全国大学生机器人大赛 (Robocon)",
       "date": "2024年",
-      "desc": "以核心队员身份参与排球挑战赛机器人的底盘控制和并联机械臂开发。",
-      "linkText": "查看项目",
-      "link": "https://github.com/pqxiao/NCU_RC_2024_Volleyball"
+      "desc": "颗粒归仓全国三等奖"
+    },
+    {
+      "title": "全国大学生机器人大赛 (Robocon)",
+      "date": "2024年",
+      "desc": "排球挑战赛全国亚军"
     }
   ],
   "projects": [
     {
       "id": "p1",
       "title": "NCU_RC_2024_Volleyball",
+      "img": "https://via.placeholder.com/800x500?text=Robocon+Volleyball",
       "desc": "南昌大学 Robocon 2024 排球挑战赛机器人下位机代码项目。实现底盘全向移动、视觉追踪及实时击球任务执行。",
       "detailsDate": "2024年",
       "detailsBody": "<img src='https://via.placeholder.com/800x400?text=Robocon+Volleyball+Robot' alt='P1 img'><p>本项目包含机器人的底盘及 Delta 并联机械臂控制代码，基于实时控制架构协调全向移动系统与视觉系统。</p><p><strong>关键技术点：</strong></p><ul><li>全向移动底盘运动学解算</li><li>Delta 并联机构控制</li><li>视觉追踪联合标定与击球任务调度</li></ul><p><br>详细代码请见：<a href='https://github.com/pqxiao/NCU_RC_2024_Volleyball' target='_blank'>GitHub仓库</a></p>"
-    },
-    {
-      "id": "p2",
-      "title": "Xizhu Bot",
-      "desc": "基于 Nonebot 框架开发的南昌大学楹联诗词协会（OC熙烛）QQ 机器人，为社团提供自动化服务。",
-      "detailsDate": "近期",
-      "detailsBody": "<p>为了提高社团内部的管理效率与互动趣味性，开发了此 QQ Bot。内置包括诗词检索、题库游戏、自动迎新等多项功能。</p><p><a href='https://github.com/pqxiao/xizhu_bot' target='_blank'>访问 GitHub 项目仓库</a> 了解更多构建细节。</p>"
     }
   ],
   "gallery": [
@@ -77,7 +82,7 @@
     },
     {
       "id": "g2",
-      "img": "https://avatars.githubusercontent.com/u/197451298?v=4",
+      "img": "",
       "title": "GitHub 活动",
       "detailsDate": "2026年",
       "detailsBody": "<p>常年活跃于各开源项目与日常算法迭代之中。</p>"
@@ -85,7 +90,7 @@
   ],
   "contact": {
     "email": "pengqixiao@email.ncu.edu.cn",
-    "address": "浙江省 杭州市 / 江西省 南昌市",
+    "address": "浙江杭州 / 江西南昌",
     "github": "https://github.com/pqxiao",
     "linkedin": "#",
     "twitter": "#"

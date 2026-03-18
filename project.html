@@ -40,11 +40,10 @@
   </main>
   
   <footer class="site-footer">
-    <p>&copy; 2024 PengQian Xiao. All Rights Reserved.</p>
+    <p>&copy; 2024 Pengqi Xiao. All Rights Reserved.</p>
   </footer>
 
       <script type="module">
-    import { initLanguage } from './assets/js/i18n.js';
     import { setupTheme } from './assets/js/main.js';
 
     // Theme setup
@@ -101,11 +100,11 @@
             container.innerHTML = `
               <div class="project-detail-header" style="max-width: 800px; margin: 0 auto; padding: 40px 0;">
                 <h1>${project.title}</h1>
-                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">${project.shortDesc}</p>
-                ${project.image ? `<img src="${project.image}" alt="${project.title}" style="width: 100%; border-radius: var(--radius-md); margin-bottom: 30px;">` : ''}
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">${project.shortDesc || project.desc || ''}</p>
+                ${(project.image || project.img) ? `<img src="${project.image || project.img}" alt="${project.title}" style="width: 100%; border-radius: var(--radius-md); margin-bottom: 30px;">` : ''}
                 
                 <div class="project-content" style="line-height: 1.8;">
-                  ${project.fullDesc || '<p>Detailed description goes here. Extend JSON structure to separate this.</p>'}
+                  ${project.fullDesc || project.detailsBody || '<p>Detailed description goes here. Extend JSON structure to separate this.</p>'}
                   
                   <!-- Video Placeholder -->
                   <div style="margin-top: 40px; background: var(--bg-section); padding: 40px; text-align: center; border-radius: var(--radius-md); border: 1px dashed var(--border-light);">

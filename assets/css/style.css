@@ -92,38 +92,201 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--bg-body); border
 .contact-list a { color: var(--text-main); text-decoration: none; transition: color 0.2s; }
 .contact-list a:hover { color: var(--primary); text-decoration: none; }
 
+.profile-mini-cards {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .profile-mini-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.mini-link-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  background: var(--bg-section);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.mini-link-card:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.mini-link-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.mini-link-logo.robocon-logo {
+  width: 98px;
+  height: 38px;
+  padding: 3px 6px;
+  background: #1f2430;
+  border-radius: 6px;
+}
+
+.mini-link-card span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 /* Timeline (Experience & Awards) */
 .vertical-timeline {
   position: relative;
-  padding-left: 20px;
-  border-left: 2px solid var(--border-light);
+  padding-left: 28px;
 }
+
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  bottom: 2px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--border-light));
+}
+
 .vertical-timeline .tl-item, .vertical-timeline .award-item {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
+
 .vertical-timeline .tl-item:last-child, .vertical-timeline .award-item:last-child {
   margin-bottom: 0;
 }
+
 .vertical-timeline .tl-item::before, .vertical-timeline .award-item::before {
   content: '';
   position: absolute;
-  left: -27px; /* 20px padding + 1px border shift + radius center */
-  top: 6px;
-  width: 12px;
-  height: 12px;
+  left: -26px;
+  top: 12px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  background: var(--primary);
-  border: 2px solid var(--bg-body);
+  background: var(--bg-body);
+  border: 2px solid var(--primary);
 }
 
-.tl-item h4, .award-item h4 { font-size: 1.2rem; margin-bottom: 5px; }
-.tl-date { font-size: 0.9rem; color: var(--text-muted); display: block; margin-bottom: 10px; }
+.tl-card {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bg-section) 86%, #ffffff 14%), var(--bg-section));
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.tl-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  border-color: color-mix(in srgb, var(--primary) 40%, var(--border-light));
+}
+
+.tl-date {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  background: color-mix(in srgb, var(--bg-body) 75%, var(--primary) 25%);
+  border: 1px solid color-mix(in srgb, var(--border-light) 70%, var(--primary) 30%);
+}
+
+.tl-title {
+  margin-bottom: 6px;
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.tl-org {
+  margin-bottom: 8px;
+  font-size: 1.12rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.tl-role {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.tl-org a {
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+.tl-org a:hover {
+  color: var(--primary);
+}
+
+.tl-desc {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.tl-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  color: var(--primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tl-link:hover {
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .vertical-timeline {
+    padding-left: 22px;
+  }
+
+  .vertical-timeline .tl-item::before,
+  .vertical-timeline .award-item::before {
+    left: -20px;
+  }
+}
 
 /* Clickable Cards */
-.proj-card { cursor: pointer; padding: 20px; border: 1px solid var(--border-light); border-radius: var(--radius-md); margin-bottom: 20px; transition: transform 0.2s, box-shadow 0.2s; display: block; color: inherit; }
+.proj-card { cursor: pointer; border: 1px solid var(--border-light); border-radius: var(--radius-md); margin-bottom: 20px; transition: transform 0.2s, box-shadow 0.2s; display: block; color: inherit; overflow: hidden; background: var(--bg-section); }
 .proj-card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: var(--shadow-sm); border-color: var(--primary); }
-.proj-info h4 { margin-bottom: 10px; color: var(--primary); text-decoration: none; }
+.proj-cover { width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg-body); border-bottom: 1px solid var(--border-light); }
+.proj-cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
+.proj-card:hover .proj-cover img { transform: scale(1.04); }
+.proj-info { padding: 14px 16px 16px; }
+.proj-info h4 { margin-bottom: 8px; color: var(--primary); text-decoration: none; }
+.proj-info p { margin: 0; color: var(--text-muted); }
 .proj-card:hover .proj-info h4 { text-decoration: underline; }
 .btn-link { display: inline-block; margin-top: 15px; font-weight: bold; color: var(--primary); }
 

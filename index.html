@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PengQian Xiao (pqxiao)</title>
+  <title>Pengqi Xiao (pqxiao)</title>
   <script>
     const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -62,8 +62,8 @@
               <div class="edu-item">
                 <i class="fas fa-graduation-cap"></i>
                 <div>
-                  <strong data-i18n="profile.education.0.degree"></strong><br>
-                  <span data-i18n="profile.education.0.school"></span><br>
+                  <strong data-i18n="profile.education.0.school"></strong><br>
+                  <span data-i18n="profile.education.0.degree"></span><br>
                   <em class="text-sm text-muted" data-i18n="profile.education.0.year"></em>
                 </div>
               </div>
@@ -77,6 +77,17 @@
               <li><i class="fab fa-github"></i> <a href="https://github.com/pqxiao" target="_blank">github.com/pqxiao</a></li>
             </ul>
           </div>
+        </div>
+
+        <div class="profile-mini-cards" aria-label="Profile quick links">
+          <a class="mini-link-card" href="https://www.robocon.org.cn/" target="_blank" rel="noopener noreferrer">
+            <img class="mini-link-logo robocon-logo" src="assets/images/robocon-logo.png" alt="Robocon Logo" loading="lazy">
+            <span>CURC-ROBOCON</span>
+          </a>
+          <a class="mini-link-card" href="https://space.bilibili.com/480643172" target="_blank" rel="noopener noreferrer">
+            <img class="mini-link-logo" src="https://www.bilibili.com/favicon.ico" alt="Bilibili Logo" loading="lazy">
+            <span>南昌大学机器人队</span>
+          </a>
         </div>
       </div>
     </section>
@@ -124,7 +135,7 @@
       <a href="mailto:pqxiao@example.com" title="Email"><i class="fas fa-envelope"></i></a>
       <a href="https://github.com/pqxiao" target="_blank"><i class="fab fa-github"></i></a>
     </div>
-    <p>&copy; 2024 PengQian Xiao. All Rights Reserved.</p>
+    <p>&copy; 2024 Pengqi Xiao. All Rights Reserved.</p>
   </footer>
 
   <!-- Modal for Gallery -->
@@ -141,7 +152,7 @@
 
     if(true) {
       initLanguage();
-      // Setup theme uses imported function
+      setupTheme();
     }
     
     // Make closeDetails available globally since it's inline in HTML button
