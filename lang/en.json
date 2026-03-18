@@ -1,5 +1,6 @@
 {
   "nav": {
+    "home": "Home",
     "siteName": "Daniel's Portfolio",
     "about": "Biography",
     "experience": "Experience",
@@ -35,6 +36,7 @@
     {
       "role": "Robotics Software Intern",
       "company": "GigaAI",
+      "companyLink": "https://gigaai.cc/",
       "date": "Recent – Present",
       "location": "Hangzhou, Zhejiang",
       "desc": "Focused on robot control systems development, participating in core algorithms testing and implementation."
@@ -75,7 +77,7 @@
     },
     {
       "id": "g2",
-      "img": "https://avatars.githubusercontent.com/u/197451298?v=4",
+      "img": "",
       "title": "GitHub Activity",
       "detailsDate": "2026",
       "detailsBody": "<p>Active throughout multiple open source repositories.</p>"

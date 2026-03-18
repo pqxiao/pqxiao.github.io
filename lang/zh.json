@@ -1,5 +1,6 @@
 {
   "nav": {
+    "home": "首页",
     "siteName": "Daniel's Portfolio",
     "about": "个人简介",
     "experience": "工作经历",
@@ -35,6 +36,7 @@
     {
       "role": "机器人软件实习生",
       "company": "GigaAI",
+      "companyLink": "https://gigaai.cc/",
       "date": "近期 – 至今",
       "location": "杭州，浙江",
       "desc": "专注于机器人控制系统开发，参与多项核心算法的研究和落地测试。"

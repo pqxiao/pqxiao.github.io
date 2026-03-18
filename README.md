@@ -1,6 +1,6 @@
 # Daniel's Portfolio / 个人主页
 
-这是一个基于纯前端技术栈 (原生 HTML, CSS, JavaScript) 构建的轻量级个人作品集网页。全面支持双语（中/英）和系统级日夜间主题切换。
+这是一个纯vibe coding实现的基于纯前端技术栈 (原生 HTML, CSS, JavaScript) 构建的轻量级个人作品集网页。全面支持双语（中/英）和系统级日夜间主题切换。
 
 > 该项目的数据采用**高度解耦**的方式提取到了本地 `.json` 文件内。每次修改文字、添加项目、经历只需修改对应的字典文件，页面样式会自动重新渲染。
 
@@ -43,7 +43,7 @@
 
 ### 1. 修改主要文字（如姓名、自我介绍、联络方式）
 找到 `.json` 中的 `profile` 和 `contact` 对象直接修改值的内容即可。
-*提示：自我介绍 `bio` 字段中可以直接写入简单的 html 标签用于加粗或其他特殊效果：`"bio": "作为一名大三人工智能学生..."`*
+*提示：自我介绍 `bio` 字段中可以直接写入简单的 html 标签用于加粗或其他特殊效果：`"bio": "作为一名..."`*
 
 ### 2. 添加一段新的工作经历或获奖经历
 由于使用了时间轴效果，所有的条目必须被添加到根目录底下的 `experience` 或 `awards` 数组（Array）中去。
@@ -51,10 +51,10 @@
 ```json
 "experience": [
   {
-    "title": "新公司的酷炫头衔",
+    "title": "company",
     "companyLink": "https://newcompany.com", // [可选] 如果带有该行，标题会自动变为可点击的蓝色超链接
     "date": "2024.12 - 至今",
-    "desc": "基于 ROS2 实现了酷炫的新平台架构，并在实机中完成验证..."
+    "desc": "XXX..."
   }
 ]
 ```
@@ -65,8 +65,8 @@
 "projects": [
   {
     "id": "p3",  // 必须是全小写或数字，具有唯一性，用于URL查询 project.html?id=p3
-    "title": "双足平衡机器人",
-    "shortDesc": "基于强化学习的下半身姿态估算与抗扰动步态研究",
+    "title": "projects",
+    "shortDesc": "XXX...",
     "image": "assets/images/new_project.webp", // [可选] 卡片或顶部配图
     "fullDesc": "<p>这里是你项目深度的细节描述，<strong>支持完全的 HTML 写法</strong>，你可以往这里塞很多段落介绍，或者写 <code>代码</code> 标签都可以。</p>"
   }
@@ -82,6 +82,4 @@
 ## 🐞 部署到 GitHub Pages 注意事项
 
 纯静态结构，只需要把这个根文件夹 **直接 Push 到 Github main/master 分支** 上。
-然后在 GitHub 仓库对应的 `Settings` -> `Pages` 中，来源 Source 选为 **Deploy from a branch** 即可。无需执行任何构建命令 (如 npm run build)。
-
-如发现部署后出现 CSS 和 JS 指向 404 或图片损坏，请确保 GitHub Pages 的 URL 不带任何奇奇怪怪的子路径（默认 `https://pqxiao.github.io/` 格式是最安全的）。
+然后在 GitHub 仓库对应的 `Settings` -> `Pages` 中，来源 Source 选为 **Deploy from a branch** 即可。无需执行任何构建命令。
