@@ -8,7 +8,7 @@
     const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', savedTheme);
   </script>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260318-1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -147,8 +147,8 @@
   </div>
 
   <script type="module">
-    import { initLanguage } from './assets/js/i18n.js';
-    import { setupTheme } from './assets/js/main.js';
+    import { initLanguage } from './assets/js/i18n.js?v=20260318-1';
+    import { setupTheme } from './assets/js/main.js?v=20260318-1';
 
     if(true) {
       initLanguage();

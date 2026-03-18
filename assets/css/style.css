@@ -187,7 +187,7 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--bg-body); border
 }
 
 .tl-card {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--bg-section) 86%, #ffffff 14%), var(--bg-section));
+  background: var(--bg-section);
   border: 1px solid var(--border-light);
   border-radius: 12px;
   padding: 16px 18px;
@@ -198,7 +198,7 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--bg-body); border
 .tl-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-  border-color: color-mix(in srgb, var(--primary) 40%, var(--border-light));
+  border-color: var(--primary);
 }
 
 .tl-date {
@@ -209,8 +209,8 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--bg-body); border
   font-size: 0.78rem;
   letter-spacing: 0.02em;
   color: var(--text-muted);
-  background: color-mix(in srgb, var(--bg-body) 75%, var(--primary) 25%);
-  border: 1px solid color-mix(in srgb, var(--border-light) 70%, var(--primary) 30%);
+  background: rgba(41, 98, 255, 0.12);
+  border: 1px solid rgba(41, 98, 255, 0.28);
 }
 
 .tl-title {
@@ -236,7 +236,7 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--bg-body); border
 .tl-org a {
   color: var(--text-main);
   text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+  border-bottom: 1px solid rgba(41, 98, 255, 0.35);
 }
 
 .tl-org a:hover {

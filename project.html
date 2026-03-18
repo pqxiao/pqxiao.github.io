@@ -8,7 +8,7 @@
     const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', savedTheme);
   </script>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260318-1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -44,7 +44,8 @@
   </footer>
 
       <script type="module">
-    import { setupTheme } from './assets/js/main.js';
+    import { setupTheme } from './assets/js/main.js?v=20260318-1';
+    const DATA_VERSION = '20260318-1';
 
     // Theme setup
     try {
@@ -81,7 +82,7 @@
           }
 
           try {
-            const res = await fetch(`lang/${lang}.json`);
+            const res = await fetch(`lang/${lang}.json?v=${DATA_VERSION}`, { cache: 'no-store' });
             const data = await res.json();
             
             const navLinks = document.getElementById('nav-links-container');

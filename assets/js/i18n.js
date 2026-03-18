@@ -5,6 +5,8 @@ const CONFIG = {
   locales: ['zh', 'en']
 };
 
+const DATA_VERSION = '20260318-1';
+
 let currentLang = localStorage.getItem('site_lang') || CONFIG.defaultLang;
 if (!CONFIG.locales.includes(currentLang)) currentLang = CONFIG.defaultLang;
 let siteData = null; // caches the JSON
@@ -27,7 +29,7 @@ export async function initLanguage() {
 
 async function loadLanguage(lang) {
   try {
-    const res = await fetch(`lang/${lang}.json`);
+    const res = await fetch(`lang/${lang}.json?v=${DATA_VERSION}`, { cache: 'no-store' });
     if (!res.ok) throw new Error('Data fetch failed');
     siteData = await res.json();
     renderPage();
