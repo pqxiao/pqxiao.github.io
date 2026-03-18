@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nav.siteName">Personal Portfolio</title>
+  <script>
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-text" data-i18n="nav.siteName"></span>
+      </a>
+      <div class="nav-actions">
+        <div class="nav-links">
+          <a href="#about" data-i18n="nav.about"></a>
+          <a href="#experience" data-i18n="nav.experience"></a>
+          <a href="#awards" data-i18n="nav.awards"></a>
+          <a href="#projects" data-i18n="nav.projects"></a>
+          <a href="#gallery" data-i18n="nav.gallery"></a>
+          <a href="#contact" data-i18n="nav.contact"></a>
+        </div>
+        <div class="nav-controls">
+          <button class="control-btn lang-toggle" aria-label="Toggle Language"><i class="fas fa-language"></i> <span id="lang-btn-text">EN</span></button>
+          <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-body container">
+    <!-- Biography / Intro -->
+    <section id="about" class="section-row align-center pb-80 pt-80">
+      <div class="profile-header">
+        <img src="assets/images/Avatar.jpg" alt="Avatar" class="avatar-large" onerror="this.src='https://via.placeholder.com/200'">
+        <h1 class="name-title" data-i18n="profile.name"></h1>
+        <h3 class="role-title" data-i18n="profile.role"></h3>
+        <p class="bio-desc" data-i18n="profile.bio"></p>
+        <div class="interests-edu">
+          <div class="interests">
+            <h4 data-i18n="profile.interestsTitle"></h4>
+            <ul id="interests-list"></ul>
+          </div>
+          <div class="education">
+            <h4 data-i18n="profile.educationTitle"></h4>
+            <div id="education-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience" class="section-row">
+      <div class="section-title"><h2 data-i18n="sections.experience"></h2></div>
+      <div class="section-content">
+        <div class="timeline-ext" id="experience-list"></div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards" class="section-row">
+      <div class="section-title"><h2 data-i18n="sections.awards"></h2></div>
+      <div class="section-content" id="awards-list"></div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section-row">
+      <div class="section-title"><h2 data-i18n="sections.projects"></h2></div>
+      <div class="section-content projects-list" id="projects-list"></div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section-row">
+      <div class="section-title"><h2 data-i18n="sections.gallery"></h2></div>
+      <div class="section-content gallery-grid" id="gallery-grid"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-row">
+      <div class="section-title"><h2 data-i18n="sections.contact"></h2></div>
+      <div class="section-content" id="contact-info">
+        <p><i class="fas fa-envelope"></i> <span id="contact-email"></span></p>
+        <p><i class="fas fa-map-marker-alt"></i> <span id="contact-address"></span></p>
+        <div class="social-links mt-20">
+          <a id="contact-github" href="#" target="_blank"><i class="fab fa-github"></i></a>
+          <a id="contact-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a id="contact-twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer"></p>
+  </footer>
+
+  <!-- Detail Modal Base -->
+  <div id="detailModal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeDetails()">&times;</button>
+      <div id="modalContent" class="modal-content">
+        <!-- Content injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

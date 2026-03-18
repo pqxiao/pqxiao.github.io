@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "siteName": "My Website",
+    "about": "个人简介",
+    "experience": "工作经历",
+    "awards": "获奖经历",
+    "projects": "个人项目",
+    "gallery": "图集",
+    "contact": "联系方式"
+  },
+  "profile": {
+    "name": "你的名字",
+    "role": "研究员 / 工程师",
+    "bio": "在这里写下你的个人简介内容。你可以参考目标模板，通过简洁专业的话语描述自己的研究方向、工作重点以及对于未来的愿景。",
+    "interestsTitle": "研究兴趣 / 技能",
+    "interests": [
+      { "icon": "fas fa-robot", "text": "机器人技术" },
+      { "icon": "fas fa-code", "text": "软件开发" },
+      { "icon": "fas fa-brain", "text": "人工智能" }
+    ],
+    "educationTitle": "教育经历",
+    "education": [
+      { "icon": "fas fa-graduation-cap", "degree": "硕士 / 电子工程", "school": "某某大学", "year": "2018 - 2021" },
+      { "icon": "fas fa-graduation-cap", "degree": "学士 / 计算机科学", "school": "某某大学", "year": "2014 - 2018" }
+    ]
+  },
+  "sections": {
+    "experience": "工作经历",
+    "awards": "获奖经历",
+    "projects": "个人项目",
+    "gallery": "图集展示",
+    "contact": "联系方式",
+    "viewDetails": "查看详情"
+  },
+  "experience": [
+    {
+      "role": "高级工程师",
+      "company": "某某科技有限公司",
+      "date": "2021年9月 – 至今",
+      "location": "北京",
+      "desc": "主导某核心机器人硬件或软件产品的研发设计。"
+    },
+    {
+      "role": "研发工程师",
+      "company": "某某创业公司",
+      "date": "2018年4月 – 2021年9月",
+      "location": "深圳",
+      "desc": "参与协作机械臂控制算法研发，完成多个关键模块落地。"
+    }
+  ],
+  "awards": [
+    {
+      "title": "2020年度优秀开发者奖",
+      "date": "某某科技园 · 2020年10月",
+      "desc": "表彰在开源社区和技术生态建设中做出的卓越贡献。",
+      "linkText": "查看证书",
+      "link": "#"
+    },
+    {
+      "title": "全国大学生机器人大赛 冠军",
+      "date": "主办方 · 2017年7月",
+      "desc": "作为核心队员参与某某赛事并获得一等奖。",
+      "linkText": "相关链接",
+      "link": "#"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "title": "项目A：全自由度仿生机器手",
+      "desc": "设计与开发具有高灵巧度的全自由度柔性机械手，实现在多种复杂场景下的抓取验证。",
+      "detailsDate": "2022年 - 2023年",
+      "detailsBody": "<img src='https://via.placeholder.com/800x400?text=Project+Display+Img' alt='P1 img'><p>本项目致力于研发一种兼具高强度与高灵敏度的仿生机械手。区别于传统采用刚性连杆结构的机械手，我们大量引入了复合材料及阻抗控制算法...</p><p><strong>关键技术点：</strong></p><ul><li>分布式触觉传感器融合</li><li>一体化微型驱动关节</li><li>基于强化学习的抓取策略</li></ul>"
+    },
+    {
+      "id": "p2",
+      "title": "项目B：开源协作机械臂框架",
+      "desc": "开源通用框架，适配市面上主流的协作机械臂，提供实时轨迹规划和避障算法。",
+      "detailsDate": "2020年",
+      "detailsBody": "<p>这套框架旨在解决当前工业界轻量级机械臂由于生态差异导致的重复造轮子问题。我们提供了一套标准化的API接口以及开箱即用的运动学求解器。</p><p><a href='#'>访问GitHub项目仓库</a> 查看更多文档和源码。</p>"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "g1",
+      "img": "https://via.placeholder.com/300x200?text=Photo+1",
+      "title": "活动现场照片",
+      "detailsDate": "2023年8月",
+      "detailsBody": "<img src='https://via.placeholder.com/800x530?text=Event+Photo' alt='img'><p>在此次全球展会上，我们首发了最新型的四足双臂机器人，成功吸引了来自工业界与学术界的广泛关注与讨论。</p>"
+    },
+    {
+      "id": "g2",
+      "img": "https://via.placeholder.com/300x200?text=Photo+2",
+      "title": "实验室开发日常",
+      "detailsDate": "2022年10月",
+      "detailsBody": "<img src='https://via.placeholder.com/800x530?text=Lab+Photo' alt='img'><p>这是深夜攻坚算法模块时的留影，大家都在为了提高末端控制精度而推导公式。</p>"
+    },
+    {
+      "id": "g3",
+      "img": "https://via.placeholder.com/300x200?text=Photo+3",
+      "title": "硬件原型迭代",
+      "detailsDate": "2021年4月",
+      "detailsBody": "<img src='https://via.placeholder.com/800x530?text=Hardware+Proto' alt='img'><p>机械部分从最初的树脂打印迭代到了现在的航空铝切削版本，强度提升极高。</p>"
+    }
+  ],
+  "contact": {
+    "email": "your.email@example.com",
+    "address": "北京市海淀区某某路某某号",
+    "github": "#",
+    "linkedin": "#",
+    "twitter": "#"
+  },
+  "footer": "© 2026 Your Name. Powered by Vanilla Web Tech."
+}
