@@ -47,6 +47,12 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--bg-body); border
 }
 .control-btn:hover { border-color: var(--primary); color: var(--primary); }
 
+.github-btn { background: var(--text-main); color: var(--bg-body); border-color: var(--text-main); }
+.github-btn:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+[data-theme="dark"] .github-btn:hover { color: #121212; }
+.gh-text { display: none; }
+@media (min-width: 768px) { .gh-text { display: inline; } }
+
 .theme-toggle { border: none; font-size: 1.2rem; padding: 0; width: 32px; justify-content: center; }
 .theme-toggle:hover { border-color: transparent; }
 [data-theme="light"] .sun-icon { display: none; }
@@ -67,9 +73,9 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--bg-body); border
 /* Biography */
 .profile-header { max-width: 800px; margin: 0 auto; }
 .avatar-large { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; box-shadow: var(--shadow-sm); }
-.name-title { font-size: 2.5rem; margin-bottom: 10px; }
-.role-title { font-size: 1.2rem; color: var(--text-muted); font-weight: normal; margin-bottom: 20px; }
-.bio-desc { font-size: 1.1rem; margin-bottom: 30px; text-align: left; }
+.name-title { font-size: 1.8rem; margin-bottom: 5px; font-weight: 700; }
+.role-title { font-size: 1.1rem; color: var(--text-muted); font-weight: normal; margin-bottom: 20px; }
+.bio-desc { font-size: 1.05rem; margin-bottom: 30px; text-align: left; }
 
 .interests-edu { display: flex; flex-direction: column; gap: 30px; text-align: left; margin-top: 30px; }
 @media (min-width: 600px) { .interests-edu { flex-direction: row; justify-content: space-between; gap: 40px; } }

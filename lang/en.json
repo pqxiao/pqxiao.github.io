@@ -1,6 +1,6 @@
 {
   "nav": {
-    "siteName": "My Website",
+    "siteName": "Daniel's Portfolio",
     "about": "Biography",
     "experience": "Experience",
     "awards": "Awards",
@@ -9,19 +9,18 @@
     "contact": "Contact"
   },
   "profile": {
-    "name": "Your Name",
-    "role": "Researcher / Engineer",
-    "bio": "Write your biography here. You can refer to target templates to describe your research directions, focus, and vision for the future concisely and professionally.",
-    "interestsTitle": "Interests / Skills",
+    "name": "Daniel Shaw",
+    "role": "AI Student / Robotics Software Intern",
+    "bio": "A third-year Artificial Intelligence student and semi-retired RCer (Robocon), currently working as a robotics software intern at GigaAI. Focused on developing robot control systems.",
+    "interestsTitle": "Technical Stack",
     "interests": [
-      { "icon": "fas fa-robot", "text": "Robotics" },
-      { "icon": "fas fa-code", "text": "Software Dev" },
-      { "icon": "fas fa-brain", "text": "AI" }
+      { "icon": "fas fa-code", "text": "C/C++ / Python / MATLAB" },
+      { "icon": "fas fa-robot", "text": "ROS / ROS2 / Webots / MuJoCo" },
+      { "icon": "fas fa-microchip", "text": "STM32 / ESP32 / FreeRTOS" }
     ],
     "educationTitle": "Education",
     "education": [
-      { "icon": "fas fa-graduation-cap", "degree": "M.S. / Electronic Engineering", "school": "University XYZ", "year": "2018 - 2021" },
-      { "icon": "fas fa-graduation-cap", "degree": "B.S. / Computer Science", "school": "University XYZ", "year": "2014 - 2018" }
+      { "icon": "fas fa-graduation-cap", "degree": "B.S. / Artificial Intelligence", "school": "Nanchang University", "year": "2023 - Present" }
     ]
   },
   "sections": {
@@ -34,81 +33,60 @@
   },
   "experience": [
     {
-      "role": "Senior Engineer",
-      "company": "Tech Company",
-      "date": "Sep 2021 – Present",
-      "location": "Beijing",
-      "desc": "Leading the R&D design of core hardware/software robot products."
-    },
-    {
-      "role": "R&D Engineer",
-      "company": "Startup Inc.",
-      "date": "Apr 2018 – Sep 2021",
-      "location": "Shenzhen",
-      "desc": "Participated in collab-robot arm algorithms and completed module landing."
+      "role": "Robotics Software Intern",
+      "company": "GigaAI",
+      "date": "Recent – Present",
+      "location": "Hangzhou, Zhejiang",
+      "desc": "Focused on robot control systems development, participating in core algorithms testing and implementation."
     }
   ],
   "awards": [
     {
-      "title": "Outstanding Developer Award 2020",
-      "date": "Tech Park · Oct 2020",
-      "desc": "Awarded for exceptional contributions to open source community.",
-      "linkText": "View Certificate",
-      "link": "#"
-    },
-    {
-      "title": "National Robot Competition Champion",
-      "date": "Host · Jul 2017",
-      "desc": "Participated as a key member and won the first prize.",
-      "linkText": "Related Link",
-      "link": "#"
+      "title": "National College Student Robot Competition (Robocon)",
+      "date": "2024",
+      "desc": "Participated as a key member for Chassis control and Delta parallel arm development in the Volleyball Challenge.",
+      "linkText": "View Project",
+      "link": "https://github.com/pqxiao/NCU_RC_2024_Volleyball"
     }
   ],
   "projects": [
     {
       "id": "p1",
-      "title": "Project A: Full-DOF Bionic Hand",
-      "desc": "Designed and developed a flexible mechanical hand with high dexterity.",
-      "detailsDate": "2022 - 2023",
-      "detailsBody": "<img src='https://via.placeholder.com/800x400?text=Project+Display+Img' alt='P1 img'><p>This project is dedicated to developing a high-strength bionic hand...</p><ul><li>Distributed tactile sensors</li><li>Integrated micro joints</li><li>RL based grasping</li></ul>"
+      "title": "NCU_RC_2024_Volleyball",
+      "desc": "Project for NCU Robocon 2024 Volleyball Challenge robot, including chassis control and Delta parallel arm control.",
+      "detailsDate": "2024",
+      "detailsBody": "<img src='https://via.placeholder.com/800x400?text=Robocon+Volleyball+Robot' alt='P1 img'><p>Coordinates omnidirectional movement, vision tracking, and cushion ball task execution under a real-time control architecture.</p><ul><li>Omnidirectional chassis kinematics</li><li>Delta parallel mechanism control</li><li>Vision tracking & task scheduling</li></ul><p><a href='https://github.com/pqxiao/NCU_RC_2024_Volleyball' target='_blank'>Visit GitHub Repository</a>.</p>"
     },
     {
       "id": "p2",
-      "title": "Project B: Open Collab-Arm Framework",
-      "desc": "An open framework for mainstream collaborative robotic arms.",
-      "detailsDate": "2020",
-      "detailsBody": "<p>This framework standardizes APIs to avoid reinventing the wheel in industry.</p><p><a href='#'>Visit GitHub</a> for documentation.</p>"
+      "title": "Xizhu Bot",
+      "desc": "QQ Bot based on the Nonebot framework for the Nanchang University Poetry Association (OC Xizhu).",
+      "detailsDate": "Recent",
+      "detailsBody": "<p>A functional bot that includes poem search, question bank games, and automatic welcoming systems to improve management efficiency.</p><p><a href='https://github.com/pqxiao/xizhu_bot' target='_blank'>Visit GitHub</a> for documentation.</p>"
     }
   ],
   "gallery": [
     {
       "id": "g1",
-      "img": "https://via.placeholder.com/300x200?text=Photo+1",
-      "title": "Event Live Photos",
-      "detailsDate": "Aug 2023",
-      "detailsBody": "<img src='https://via.placeholder.com/800x530?text=Event+Photo' alt='img'><p>Unveiled the newest quadruped dual-arm robot.</p>"
+      "img": "https://via.placeholder.com/300x200?text=Robocon+Match",
+      "title": "Robocon Live Moment",
+      "detailsDate": "2024",
+      "detailsBody": "<p>Highlights from the competition live matches.</p>"
     },
     {
       "id": "g2",
-      "img": "https://via.placeholder.com/300x200?text=Photo+2",
-      "title": "Lab Development Routine",
-      "detailsDate": "Oct 2022",
-      "detailsBody": "<img src='https://via.placeholder.com/800x530?text=Lab+Photo' alt='img'><p>Deriving formulas late at night for precision control.</p>"
-    },
-    {
-      "id": "g3",
-      "img": "https://via.placeholder.com/300x200?text=Photo+3",
-      "title": "Hardware Iterations",
-      "detailsDate": "Apr 2021",
-      "detailsBody": "<img src='https://via.placeholder.com/800x530?text=Hardware+Proto' alt='img'><p>Mechanical parts upgraded from resin to aviation aluminum.</p>"
+      "img": "https://avatars.githubusercontent.com/u/197451298?v=4",
+      "title": "GitHub Activity",
+      "detailsDate": "2026",
+      "detailsBody": "<p>Active throughout multiple open source repositories.</p>"
     }
   ],
   "contact": {
-    "email": "your.email@example.com",
-    "address": "No. XX, XX Road, Haidian Dist, Beijing",
-    "github": "#",
+    "email": "pengqixiao@email.ncu.edu.cn",
+    "address": "Hangzhou, Zhejiang / Nanchang, Jiangxi",
+    "github": "https://github.com/pqxiao",
     "linkedin": "#",
     "twitter": "#"
   },
-  "footer": "© 2026 Your Name. Powered by Vanilla Web Tech."
+  "footer": "© 2026 Daniel Shaw. Built with vanilla HTML/CSS/JS."
 }
