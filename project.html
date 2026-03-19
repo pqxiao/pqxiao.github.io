@@ -45,6 +45,7 @@
 
       <script type="module">
     import { setupTheme } from './assets/js/main.js?v=20260318-1';
+    import { renderDetailsBlock, resolvePath } from './assets/js/content-renderer.js?v=20260318-1';
     const DATA_VERSION = '20260318-1';
 
     // Theme setup
@@ -102,10 +103,10 @@
               <div class="project-detail-header" style="max-width: 800px; margin: 0 auto; padding: 40px 0;">
                 <h1>${project.title}</h1>
                 <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">${project.shortDesc || project.desc || ''}</p>
-                ${(project.image || project.img) ? `<img src="${project.image || project.img}" alt="${project.title}" style="width: 100%; border-radius: var(--radius-md); margin-bottom: 30px;">` : ''}
+                ${(project.image || project.img) ? `<img src="${resolvePath(project.image || project.img)}" alt="${project.title}" style="width: 100%; border-radius: var(--radius-md); margin-bottom: 30px;">` : ''}
                 
                 <div class="project-content" style="line-height: 1.8;">
-                  ${project.fullDesc || project.detailsBody || '<p>Detailed description goes here. Extend JSON structure to separate this.</p>'}
+                  ${renderDetailsBlock(project, { fallbackText: 'Detailed description goes here. Extend JSON structure to separate this.' })}
                   
                   <!-- Video Placeholder -->
                   <div style="margin-top: 40px; background: var(--bg-section); padding: 40px; text-align: center; border-radius: var(--radius-md); border: 1px dashed var(--border-light);">

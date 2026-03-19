@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "siteName": "Daniel's Portfolio",
-    "about": "Biography",
+    "about": "About Me",
     "experience": "Experience",
     "awards": "Awards",
     "projects": "Projects",
@@ -30,7 +30,11 @@
     "projects": "Projects",
     "gallery": "Gallery",
     "contact": "Contact",
-    "viewDetails": "View Details"
+    "viewDetails": "View Details",
+    "projectClickHint": "Click the card to view details"
+  },
+  "quickLinks": {
+    "ncuRoboteam": "NCU Roboteam"
   },
   "experience": [
     {
@@ -69,7 +73,24 @@
       "img": "https://via.placeholder.com/800x500?text=Robocon+Volleyball",
       "desc": "Project for NCU Robocon 2024 Volleyball Challenge robot, including chassis control and Delta parallel arm control.",
       "detailsDate": "2024",
-      "detailsBody": "<img src='https://via.placeholder.com/800x400?text=Robocon+Volleyball+Robot' alt='P1 img'><p>Coordinates omnidirectional movement, vision tracking, and cushion ball task execution under a real-time control architecture.</p><ul><li>Omnidirectional chassis kinematics</li><li>Delta parallel mechanism control</li><li>Vision tracking & task scheduling</li></ul><p><a href='https://github.com/pqxiao/NCU_RC_2024_Volleyball' target='_blank'>Visit GitHub Repository</a>.</p>"
+      "details": {
+        "paragraphs": [
+          "Coordinates omnidirectional movement, vision tracking, and cushion ball task execution under a real-time control architecture."
+        ],
+        "highlightsTitle": "Key technical points:",
+        "highlights": [
+          "Omnidirectional chassis kinematics",
+          "Delta parallel mechanism control",
+          "Vision tracking and task scheduling"
+        ],
+        "links": [
+          {
+            "prefix": "Source code:",
+            "label": "GitHub Repository",
+            "url": "https://github.com/pqxiao/NCU_RC_2024_Volleyball"
+          }
+        ]
+      }
     }
   ],
   "gallery": [
@@ -78,14 +99,22 @@
       "img": "https://via.placeholder.com/300x200?text=Robocon+Match",
       "title": "Robocon Live Moment",
       "detailsDate": "2024",
-      "detailsBody": "<p>Highlights from the competition live matches.</p>"
+      "details": {
+        "paragraphs": [
+          "Highlights from the competition live matches."
+        ]
+      }
     },
     {
       "id": "g2",
       "img": "",
       "title": "GitHub Activity",
       "detailsDate": "2026",
-      "detailsBody": "<p>Active throughout multiple open source repositories.</p>"
+      "details": {
+        "paragraphs": [
+          "Active throughout multiple open source repositories."
+        ]
+      }
     }
   ],
   "contact": {

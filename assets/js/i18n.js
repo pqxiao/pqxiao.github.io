@@ -1,5 +1,7 @@
 // --- i18n & Data Handling ---
 
+import { renderDetailsBlock, resolvePath } from './content-renderer.js';
+
 const CONFIG = {
   defaultLang: 'zh',
   locales: ['zh', 'en']
@@ -48,14 +50,6 @@ export function setLanguage(lang) {
   if(toggleBtn) toggleBtn.textContent = lang === 'zh' ? 'EN' : '中';
   
   loadLanguage(lang);
-}
-
-// Ensure paths are correct depending on deployment folder
-function resolvePath(path) {
-  if (!path) return '';
-  if (path.startsWith('http') || path.startsWith('mailto')) return path;
-  // If hosted at /pqxiao.github.io/ path adjustment might be needed. Currently assuming root or relative paths work
-  return path;
 }
 
 // Renders the data into DOM based on data-i18n attributes
@@ -155,14 +149,18 @@ function renderPage() {
   // Projects
   const projContainer = document.getElementById('projects-grid');
   if (projContainer && siteData.projects) {
+    const detailLabel = siteData.sections?.viewDetails || 'View Details';
+    const clickHint = siteData.sections?.projectClickHint || detailLabel;
+
     projContainer.innerHTML = siteData.projects.map(p => `
-      <a class="proj-card" href="project.html?id=${encodeURIComponent(p.id || '')}">
-        <div class="proj-cover">
-          <img src="${resolvePath(p.image || p.img || 'https://via.placeholder.com/800x500?text=Project+Preview')}" alt="${p.title}" loading="lazy">
-        </div>
+      <a class="proj-card" href="project.html?id=${encodeURIComponent(p.id || '')}" aria-label="${detailLabel}: ${p.title}">
         <div class="proj-info">
           <h4>${p.title}</h4>
           <p>${p.shortDesc || p.desc || ''}</p>
+          <span class="proj-cta">${clickHint} <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="proj-cover">
+          <img src="${resolvePath(p.image || p.img || 'https://via.placeholder.com/800x500?text=Project+Preview')}" alt="${p.title}" loading="lazy">
         </div>
       </a>
     `).join('');
@@ -196,7 +194,7 @@ window.openDetails = function(type, id) {
     html = `
       <div class="detail-art">
         <h1>${item.title}</h1>
-        ${item.detailsBody || item.desc || ''}
+        ${renderDetailsBlock(item, { fallbackText: item.desc || '' })}
         ${(item.image || item.img) ? `<img src="${resolvePath(item.image || item.img)}" alt="${item.title}">` : ''}
       </div>
     `;

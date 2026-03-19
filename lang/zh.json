@@ -30,7 +30,11 @@
     "projects": "个人项目",
     "gallery": "图集展示",
     "contact": "联系方式",
-    "viewDetails": "查看详情"
+    "viewDetails": "查看详情",
+    "projectClickHint": "点击查看详情"
+  },
+  "quickLinks": {
+    "ncuRoboteam": "南昌大学机器人队"
   },
   "experience": [
     {
@@ -69,7 +73,23 @@
       "img": "https://via.placeholder.com/800x500?text=Robocon+Volleyball",
       "desc": "南昌大学 Robocon 2024 排球挑战赛机器人下位机代码项目。实现底盘全向移动、视觉追踪及实时击球任务执行。",
       "detailsDate": "2024年",
-      "detailsBody": "<img src='https://via.placeholder.com/800x400?text=Robocon+Volleyball+Robot' alt='P1 img'><p>本项目包含机器人的底盘及 Delta 并联机械臂控制代码，基于实时控制架构协调全向移动系统与视觉系统。</p><p><strong>关键技术点：</strong></p><ul><li>全向移动底盘运动学解算</li><li>Delta 并联机构控制</li><li>视觉追踪联合标定与击球任务调度</li></ul><p><br>详细代码请见：<a href='https://github.com/pqxiao/NCU_RC_2024_Volleyball' target='_blank'>GitHub仓库</a></p>"
+      "details": {
+        "paragraphs": [
+          "本项目包含机器人的底盘及 Delta 并联机械臂控制代码，基于实时控制架构协调全向移动系统与视觉系统。"
+        ],
+        "highlights": [
+          "全向移动底盘运动学解算",
+          "Delta 并联机构控制",
+          "视觉追踪联合标定与击球任务调度"
+        ],
+        "links": [
+          {
+            "prefix": "详细代码请见：",
+            "label": "GitHub 仓库",
+            "url": "https://github.com/pqxiao/NCU_RC_2024_Volleyball"
+          }
+        ]
+      }
     }
   ],
   "gallery": [
@@ -78,14 +98,22 @@
       "img": "https://via.placeholder.com/300x200?text=Robocon+Match",
       "title": "Robocon 比赛现场",
       "detailsDate": "2024年",
-      "detailsBody": "<p>比赛现场的精彩瞬间记录，见证团队夜以继日的研发汗水。</p>"
+      "details": {
+        "paragraphs": [
+          "比赛现场的精彩瞬间记录，见证团队夜以继日的研发汗水。"
+        ]
+      }
     },
     {
       "id": "g2",
       "img": "",
       "title": "GitHub 活动",
       "detailsDate": "2026年",
-      "detailsBody": "<p>常年活跃于各开源项目与日常算法迭代之中。</p>"
+      "details": {
+        "paragraphs": [
+          "常年活跃于各开源项目与日常算法迭代之中。"
+        ]
+      }
     }
   ],
   "contact": {
