@@ -3,7 +3,7 @@
 import { renderDetailsBlock, resolvePath } from './content-renderer.js';
 
 const CONFIG = {
-  defaultLang: 'zh',
+  defaultLang: 'en',
   locales: ['zh', 'en']
 };
 

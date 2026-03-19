@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +60,7 @@
         const projectId = urlParams.get('id');
         
         // Lang Logic
-        let lang = localStorage.getItem('site_lang') || 'zh';
+        let lang = localStorage.getItem('site_lang') || 'en';
         const toggleBtn = document.getElementById('lang-toggle');
         
         if (toggleBtn) {
@@ -99,11 +99,23 @@
             }
 
             const container = document.getElementById('project-detail-container');
+            const projectImages = Array.isArray(project.images) && project.images.length
+              ? project.images
+              : [project.image || project.img].filter(Boolean);
+
+            const imagesHtml = projectImages.map((img, index) => `
+              <img
+                src="${resolvePath(img)}"
+                alt="${project.title} image ${index + 1}"
+                style="width: 100%; border-radius: var(--radius-md); margin-bottom: 16px;"
+              >
+            `).join('');
+
             container.innerHTML = `
               <div class="project-detail-header" style="max-width: 800px; margin: 0 auto; padding: 40px 0;">
                 <h1>${project.title}</h1>
                 <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">${project.shortDesc || project.desc || ''}</p>
-                ${(project.image || project.img) ? `<img src="${resolvePath(project.image || project.img)}" alt="${project.title}" style="width: 100%; border-radius: var(--radius-md); margin-bottom: 30px;">` : ''}
+                ${imagesHtml}
                 
                 <div class="project-content" style="line-height: 1.8;">
                   ${renderDetailsBlock(project, { fallbackText: 'Detailed description goes here. Extend JSON structure to separate this.' })}

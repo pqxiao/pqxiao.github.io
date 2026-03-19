@@ -70,14 +70,17 @@
     {
       "id": "p1",
       "title": "NCU_RC_2024_Volleyball",
-      "img": "https://via.placeholder.com/800x500?text=Robocon+Volleyball",
+      "img": "assets/images/project1_1.jpeg",
+      "images": [
+        "assets/images/project1_1.jpeg",
+        "assets/images/project1_2.jpg"
+      ],
       "desc": "Project for NCU Robocon 2024 Volleyball Challenge robot, including chassis control and Delta parallel arm control.",
       "detailsDate": "2024",
       "details": {
         "paragraphs": [
           "Coordinates omnidirectional movement, vision tracking, and cushion ball task execution under a real-time control architecture."
         ],
-        "highlightsTitle": "Key technical points:",
         "highlights": [
           "Omnidirectional chassis kinematics",
           "Delta parallel mechanism control",
@@ -96,7 +99,7 @@
   "gallery": [
     {
       "id": "g1",
-      "img": "https://via.placeholder.com/300x200?text=Robocon+Match",
+      "img": "assets/images/gallery_1.jpg",
       "title": "Robocon Live Moment",
       "detailsDate": "2024",
       "details": {
@@ -107,12 +110,12 @@
     },
     {
       "id": "g2",
-      "img": "",
-      "title": "GitHub Activity",
+      "img": "assets/images/gallery_2.jpg",
+      "title": "Team Photo",
       "detailsDate": "2026",
       "details": {
         "paragraphs": [
-          "Active throughout multiple open source repositories."
+          "Team photo during the development and preparation phase for the competition."
         ]
       }
     }

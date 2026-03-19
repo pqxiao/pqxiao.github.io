@@ -70,8 +70,12 @@
     {
       "id": "p1",
       "title": "NCU_RC_2024_Volleyball",
-      "img": "https://via.placeholder.com/800x500?text=Robocon+Volleyball",
-      "desc": "南昌大学 Robocon 2024 排球挑战赛机器人下位机代码项目。实现底盘全向移动、视觉追踪及实时击球任务执行。",
+      "img": "assets/images/project1_1.jpeg",
+      "images": [
+        "assets/images/project1_1.jpeg",
+        "assets/images/project1_2.jpg"
+      ],
+      "desc": "南昌大学 Robocon 2024 排球挑战赛机器人下位机代码项目。实现底盘全向移动、视觉追踪及实时垫球任务执行。",
       "detailsDate": "2024年",
       "details": {
         "paragraphs": [
@@ -80,7 +84,7 @@
         "highlights": [
           "全向移动底盘运动学解算",
           "Delta 并联机构控制",
-          "视觉追踪联合标定与击球任务调度"
+          "视觉追踪与垫球任务调度"
         ],
         "links": [
           {
@@ -95,23 +99,23 @@
   "gallery": [
     {
       "id": "g1",
-      "img": "https://via.placeholder.com/300x200?text=Robocon+Match",
+      "img": "assets/images/gallery_1.jpg",
       "title": "Robocon 比赛现场",
       "detailsDate": "2024年",
       "details": {
         "paragraphs": [
-          "比赛现场的精彩瞬间记录，见证团队夜以继日的研发汗水。"
+          "比赛现场"
         ]
       }
     },
     {
       "id": "g2",
-      "img": "",
-      "title": "GitHub 活动",
+      "img": "assets/images/gallery_2.jpg",
+      "title": "合影",
       "detailsDate": "2026年",
       "details": {
         "paragraphs": [
-          "常年活跃于各开源项目与日常算法迭代之中。"
+          "机器人合影"
         ]
       }
     }

@@ -13,7 +13,7 @@ const newScript = `  <script type="module">
     const projectId = urlParams.get('id');
     
     // Lang Logic
-    let lang = localStorage.getItem('site_lang') || 'zh';
+    let lang = localStorage.getItem('site_lang') || 'en';
     const toggleBtn = document.getElementById('lang-toggle');
     if (toggleBtn) {
       toggleBtn.textContent = lang === 'zh' ? 'EN' : '中';
